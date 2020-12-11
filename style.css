@@ -1,0 +1,56 @@
+*,
+*::before,
+*::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit;
+}
+
+html{
+    box-sizing: border-box;
+    font-style: 62.5%;
+}
+@media only screen and (max-width:31.25em){
+    html{
+        font-style: 50%;
+
+    }
+}
+
+main{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-auto-rows: 10rem;
+    height: 100vh;
+    width: 100vw;
+    background-color: purple;
+   
+}
+@media only screen and (max-width: 600px){
+    main{
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+
+    }
+}
+
+.fill{
+    height: 100%;
+    width: 100%;
+    display: block; 
+    cursor: pointer;
+    position: relative;
+    font-size: 1.6rem; 
+}
+.bg-img{
+    height: 100%;
+    width: 100%;
+    background-image: url("tiger.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.invisible{
+    display: none;
+}
